@@ -1,0 +1,57 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 1200px;
+    margin: 0px auto;
+}
+
+.header {
+    background: red;
+    width: 100%;
+    height: 110px;
+}
+
+.nav {
+    background-color: forestgreen;
+    height: 40px;
+}
+
+.main {
+    float: left;
+    width: 70%;
+    height: 400px;
+}
+
+.section {
+    width: 100%;
+    height: 200px;
+    background-color: blue;
+}
+
+.article {
+    width: 100%;
+    height: 200px;
+    background-color: black;
+}
+
+.aside {
+    float: left;
+    width: 30%;
+    height: 400px;
+    background-color: gray;
+}
+
+.footer {
+    float: left;
+    width: 100%;
+    height: 110px;
+    background-color: orange;
+}
+
+.Bai2 {
+    margin-bottom: 100px;
+}

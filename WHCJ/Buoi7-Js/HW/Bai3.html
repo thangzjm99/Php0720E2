@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var s = prompt('Xin mời nhập quãng đường S : ');
+        var distance = parseInt(s);
+        var time = distance;
+        var hour = parseInt(time / 3600);
+        var minute = parseInt(time / 60);
+        var second = time % 60;
+
+        if (isNaN(s) == true) {
+            document.write('Vui lòng nhập số');
+        } else if (distance <= 3000) {
+
+            document.write('Thời gian đi quãng đường ' + distance + 'm là : ' + minute + 'Phút' + second + 'Giây');
+        } else if (distance <= 5000) {
+            time = 3000 + distance % 3000 * 2;
+            minute = parseInt(time / 60);
+            second = time % 60;
+            document.write('Thời gian đi quãng đường ' + distance + 'm là : ' + minute + 'Phút' + second + 'Giây');
+
+
+        } else if (distance <= 6000) {
+            time = 3000 + 2000 * 2 + distance % 5000 * 3;
+            minute = parseInt(time / 60);
+            second = time % 60;
+            document.write('Thời gian đi quãng đường ' + distance + 'm là : ' + minute + 'Phút' + second + 'Giây');
+
+
+        } else {
+            time = 3000 + 2000 * 2 + 1000 * 3 + distance % 6000 * 5;
+            minute = parseInt(time / 60);
+            second = time % 60;
+            document.write('Thời gian đi quãng đường ' + distance + 'm là : ' + minute + 'Phút' + second + 'Giây');
+        }
+    </script>
+</body>
+
+</html>

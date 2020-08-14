@@ -1,0 +1,91 @@
+html {
+    width: 1300;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.header {
+    margin: 0 auto;
+    width: 960px;
+    height: 70px;
+    background-color: rgb(236, 233, 233);
+}
+
+.header img {
+    padding-top: 10px;
+    padding-left: 20px;
+    height: 65px;
+    float: left;
+}
+
+.header h4 {
+    padding-left: 300px;
+    padding-top: 20px;
+    color: rgb(16, 16, 160);
+}
+
+.header p {
+    padding-top: 10px;
+    padding-left: 330px;
+    font-size: 10px;
+}
+
+.main {
+    margin: 0 auto;
+    width: 960px;
+}
+
+.banner {
+    height: 250px;
+    background-color: rgb(189, 189, 83);
+}
+
+.search-bar {
+    height: 25px;
+    background-color: rgb(73, 73, 73);
+}
+
+input[type=text] {
+    width: 200px;
+    margin-top: 2px;
+    margin-left: 10px;
+    border-radius: 4px;
+    height: 21px;
+    position: relative;
+}
+
+i {
+    position: absolute;
+    left: 340px;
+    top: 324px;
+}
+
+.content-wrapper {
+    width: 960px;
+    margin: 0px auto;
+}
+
+.left-bar {
+    float: left;
+    background-color: rgb(255, 123, 35);
+    width: 250px;
+    min-height: 500px;
+}
+
+li {
+    list-style: none;
+    border: solid rgb(151, 131, 131) 1px;
+    padding-left: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.footer img {
+    display: block;
+    width: 1300px;
+    margin: 0px auto;
+}

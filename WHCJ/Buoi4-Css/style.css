@@ -1,0 +1,63 @@
+body {
+    /* background-color: rgb(201, 192, 154);
+    background-image: url("./img/1_tE7hwxGcg3hg35EXUk3W0g.jpeg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-image: linear-gradient(to right, red, blue); */
+    /* background: yellow url("./img/1_tE7hwxGcg3hg35EXUk3W0g.jpeg") fixed; */
+}
+
+h2 {
+    color: rebeccapurple;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+ul li {
+    list-style: none;
+    color: green;
+}
+
+ol li {
+    color: red;
+}
+
+.table tr td {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#table1 tr td {
+    color: red;
+}
+
+#table2 tr td {
+    color: blue;
+}
+
+.style1 {
+    font-weight: bold;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    color: rgb(240, 240, 134);
+}
+
+.the-p {
+    color: green;
+}
+
+.the-span {
+    color: red;
+}
+
+#span2 {
+    color: #000CCA;
+}
+
+.header1 {
+    width: 500px;
+    height: 500px;
+    background-color: red;
+}

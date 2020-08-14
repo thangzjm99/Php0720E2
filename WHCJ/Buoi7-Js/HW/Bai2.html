@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = prompt('Nhập điểm');
+        var result = parseInt(a);
+
+
+        if (isNaN(a) == true || result > 10) {
+            document.write('Vui lòng nhập số từ 1-10');
+        } else if (result >= 9) {
+            document.write('Giỏi');
+        } else if (result >= 7) {
+            document.write('Khá');
+        } else if (result >= 5) {
+            document.write('Trung bình');
+        } else {
+            document.write('Kém');
+        }
+    </script>
+</body>
+
+</html>

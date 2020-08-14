@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./myScript"></script>
+
+
+    <body>
+        <!-- <span id="getName"></span>
+        <input type="number" value="" id="number">
+        <button onclick="alert(document.getElementById('number').value);">xem ket qua</button>
+        <button onclick="document.getElementById('view').innerHTML=Date();"> Xem giowf</button>
+        <h2 id="view"></h2>
+        <button onclick="return confirm('Click zo')">Xac nhan</button>
+        <h1 style="color: red;" id="show"></h1> -->
+
+        <script>
+            // var a = parseInt(prompt("nhap so a"));
+            // var b = parseInt(prompt("nhap so b"));
+            // var tong = a + b;
+            // var hieu = a - b;
+            // var tich = a * b;
+            // var thuong = a / b;
+            // document.write("Tong hieu tich thuong cua  =  " + "" + tong + "-" + hieu + "-" + tich + "-" + thuong);
+            // var number1 = 10;
+            // var number2 = 20;
+            // if (number1 < number2) {
+            //     document.write('number1 < num2');
+            // } else if (number1 > number2) {
+            //     document.write('number2 < number1');
+            // } else {
+            //     document.write('bang nhau');
+            // }
+
+            var a = prompt('Nhap so');
+            var result = parseInt(a);
+
+            document.write(a);
+            if (result == 0) {
+                document.write('Chan');
+            } else if (isNaN(a) == true) {
+                document.write('Day la chu');
+            } else {
+                document.write('Le');
+            }
+
+            if (result >= 9) {
+                document.write('Gioi');
+            } else if (result >= 7) {
+                document.write('Kha');
+            } else if (result >= 5) {
+                document.write('TB');
+            } else {
+                document.write('Kem');
+            }
+        </script>
+</head>
+</body>
+
+</html>

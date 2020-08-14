@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        
+        @media screen and (min-width: 480px) {
+            #mb {
+                display: none;
+            }
+            .header {
+                width: 1200px;
+                margin: 0px auto;
+            }
+            .main {
+                width: 1200px;
+                margin: 0px auto;
+            }
+            #pc {
+                display: block;
+                width: 100%;
+                height: 300px;
+            }
+            .content {
+                height: 400px;
+                width: 400px;
+                float: left;
+            }
+            p {
+                text-align: justify;
+                padding: 10px;
+            }
+            .red {
+                background-color: red;
+            }
+            .blue {
+                background-color: blue;
+            }
+            .green {
+                background-color: green;
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            #pc {
+                display: none;
+            }
+            #mb {
+                display: block;
+                width: 100%;
+                border: 0px;
+                margin: 0px;
+            }
+            .red {
+                background-color: red;
+            }
+            .blue {
+                background-color: blue;
+            }
+            .green {
+                background-color: green;
+            }
+            p {
+                padding: 4%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <img src="../img/banner.png " id="pc" alt="">
+        <img src="./img/php.png" id="mb" alt="">
+    </div>
+    <div class="main">
+        <div class="content red">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo nihil non cumque perferendis doloribus officia esse hic mollitia, quos minus cupiditate molestiae laborum quo, quae odit ipsam id error! Ducimus Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Quod eos amet doloremque fugit eaque nobis et! Hic quae necessitatibus enim, dolorum odit animi distinctio ad, laborum aliquam amet velit nihil?.</p>
+        </div>
+        <div class="content green">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro hic asperiores aliquam dolore architecto labore, dolor vero possimus exercitationem sapiente, earum amet dignissimos reiciendis quo iste, cupiditate eveniet sit aperiam! Lorem
+                ipsum, dolor sit amet consectetur adipisicing elit. Ab incidunt atque maiores eaque hic quasi corrupti totam deserunt veniam? Voluptatum, aliquam cupiditate magni atque cumque vel blanditiis aliquid doloremque nisi.</p>
+        </div>
+        <div class="content blue">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla ipsam laborum at pariatur. Neque aperiam delectus, eos dolorem qui nisi accusamus quidem quis id numquam voluptatem optio doloremque in ea Lorem ipsum, dolor sit amet consectetur
+                adipisicing elit. Placeat nemo dolor iste alias? Maiores, accusantium. Est, expedita cupiditate. Nostrum rem deserunt impedit, architecto veritatis saepe odit incidunt eos officiis numquam!.</p>
+        </div>
+</body>
+
+</html>
