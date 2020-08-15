@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    td {
+        padding: 15px;
+    }
+</style>
+
+<body>
+    <table style="margin: 50px auto;" border="1">
+        <tr>
+            <td>Họ tên</td>
+            <td><input type="text" id="name"> </td>
+        </tr>
+        <tr>
+            <td>Số điện thoại</td>
+            <td><input type="number" id="phone"> </td>
+        </tr>
+        <tr>
+            <td>Giới tính</td>
+            <td>
+                <input type="radio" name="gender" id="male" value="Nam" checked> Nam
+                <input type="radio" name="gender" id="female" value="Nữ"> Nữ
+            </td>
+        </tr>
+        <tr>
+            <td>Sở thích</td>
+            <td>
+                <input type="checkbox" name="hobby" id="music" value="Nghe nhạc" checked> Nghe nhạc
+                <input type="checkbox" name="hobby" id="soccer" value="Bóng đá"> Bóng đá
+                <input type="checkbox" name="hobby" id="travel" value="Du lịch"> Du lịch
+                <input type="checkbox" name="hobby" id="reading" value="Đọc sách"> Đọc sách
+            </td>
+        </tr>
+
+        <tr align="center">
+            <td colspan="2"><button onclick="getInfo()">Lấy thông tin</button></td>
+        </tr>
+        <tr align="center">
+            <td colspan="2">
+                <p id="info"></p>
+            </td>
+        </tr>
+
+    </table>
+
+
+    <script>
+        function getInfo() {
+            var name = document.getElementById('name').value;
+            var phone = parseInt(document.getElementById('phone').value);
+            var checkGender = document.getElementsByName('gender');
+            var checkHobby = document.getElementsByName('hobby');
+            var gender = '';
+            var hobby = '';
+            if (name.length == 0 || isNaN(phone)) {
+                alert('Vui lòng nhập đủ tên và số điện thoại');
+            } else {
+                for (var i = 0; i < checkGender.length; i++) {
+                    if (checkGender[i].checked == true) {
+                        gender = checkGender[i].value;
+                    }
+                }
+
+                for (var i = 0; i < checkHobby.length; i++) {
+                    if (checkHobby[i].checked == true) {
+                        hobby = checkHobby[i].value + ',' + hobby;
+                    }
+                }
+
+
+                if (gender == 'Nam') {
+                    alert('Tên : ' + name + '; Số điện thoại : ' + phone + '; Giới tính : ' + gender + '; Sở thích : ' + hobby);
+                } else {
+                    document.getElementById('info').innerHTML = 'Tên : ' + name + '; Số điện thoại : ' + phone + '; Giới tính : ' + gender + '; Sở thích : ' + hobby;
+                }
+
+            }
+
+        }
+    </script>
+</body>
+
+</html>
