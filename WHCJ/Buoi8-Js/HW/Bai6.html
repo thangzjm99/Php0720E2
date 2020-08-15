@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    td {
+        padding: 15px;
+    }
+</style>
+
+<body>
+    <table style="margin: 50px auto;" border="1">
+        <tr>
+            <td>Nhập số tính giai thừa từ 1-50</td>
+            <td><input type="number" id="a"> </td>
+        </tr>
+        <tr align="center">
+            <td colspan="2"><button onclick="calculate()">Tính giai thừa</button></td>
+        </tr>
+        <tr>
+            <td>Kết quả</td>
+            <td>
+                <p id="result"></p>
+            </td>
+        </tr>
+    </table>
+    <script>
+        function calculate() {
+            var a = parseInt(document.getElementById('a').value);
+            var result = 1;
+            if (isNaN(a) || a < 1 || a > 50) {
+                alert('Nhập số trong khoảng 1-50');
+            } else {
+                for (var i = 1; i <= a; i++) {
+                    result *= i;
+                }
+                document.getElementById('result').innerHTML = "Giai thừa của " + a + "! là " + result;
+            }
+        }
+    </script>
+</body>
+
+</html>
