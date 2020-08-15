@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    td {
+        padding: 15px;
+    }
+</style>
+
+<body>
+    <table style="margin: 50px auto;" border="1">
+        <tr>
+            <td>ID</td>
+            <td colspan="3"><input type="number" id="id"> </td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td colspan="3"><input type="text" id="name"> </td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td colspan="3"><input type="email" id="email"> </td>
+        </tr>
+        <tr>
+            <td>Phone</td>
+            <td colspan="3"><input type="number" id="phone"> </td>
+        </tr>
+
+
+        <tr align="center">
+            <td colspan="4">
+                <button onclick="Add()">Add</button>
+                <button onclick="Edit()">Edit</button>
+                <button onclick="Delete()">Delete</button>
+                <button onclick="View()">View</button>
+                <button onclick="Search()">Search</button>
+                <button onclick="Refresh()">Refresh</button>
+            </td>
+        </tr>
+
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+        </tr>
+        <tr>
+            <th>
+                <p id="showId"></p>
+            </th>
+            <th>
+                <p id="showName"></p>
+            </th>
+            <th>
+                <p id="showEmail"></p>
+            </th>
+            <th>
+                <p id="showPhone"></p>
+            </th>
+        </tr>
+
+
+    </table>
+    <script>
+        let count = 0;
+
+
+        var listPerson = [];
+
+        function View() {
+            var listPerson = this.listPerson;
+            var showId = '',
+                showName = '',
+                showEmail = '',
+                showPhone = '';
+            for (i = 0; i < listPerson.length; i++) {
+                showId += listPerson[i].id + '<br>';
+            }
+            for (i = 0; i < listPerson.length; i++) {
+                showName += listPerson[i].name + '<br>';
+            }
+            for (i = 0; i < listPerson.length; i++) {
+                showEmail += listPerson[i].email + '<br>';
+            }
+            for (i = 0; i < listPerson.length; i++) {
+                showPhone += listPerson[i].phone + '<br>';
+            }
+
+            document.getElementById('showId').innerHTML = showId;
+            document.getElementById('showName').innerHTML = showName;
+            document.getElementById('showEmail').innerHTML = showEmail;
+            document.getElementById('showPhone').innerHTML = showPhone;
+
+        }
+
+        function clear() {
+            document.getElementById('id').value = null;
+            document.getElementById('name').value = null;
+            document.getElementById('email').value = null;
+            document.getElementById('phone').value = null;
+        }
+
+        function Add() {
+            var listPerson = this.listPerson;
+            var person = {
+                id: document.getElementById('id').value,
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value
+            };
+            listPerson.push(person)
+            alert('Đã thêm thành công');
+            clear();
+
+        }
+
+        function Delete() {
+            var id = document.getElementById('id').value;
+            for (var i = 0; i < this.listPerson.length; i++) {
+                if (this.listPerson[i].id == id) {
+                    this.listPerson.splice(i, 1);
+                    clear();
+                    alert('Đã xóa thành công');
+                }
+            }
+            View();
+        }
+    </script>
+</body>
+
+</html>
