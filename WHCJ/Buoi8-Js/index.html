@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="num1">Nhap so 1</label>
+    <input id="num1" type="number">
+    <br>
+    <label for="num2">Nhap so 2</label>
+    <input id="num2" type="number">
+    <br>
+    <br>
+    <label for="result">ket qua</label>
+    <input id="result" type="number">
+
+
+    <button id="cong" onclick="cong()">Cong</button>
+    <button id="tru" onclick="tru()">Tru</button>
+    <button id="nhan" onclick="nhan()">Nhan</button>
+    <button id="chia" onclick="chia()">Chia</button>
+
+    <script>
+        function cong() {
+
+            var number1 = parseInt(document.getElementById('num1').value);
+            var number2 = parseInt(document.getElementById('num2').value);
+            var result = number1 + number2;
+            document.getElementById('result').value = result;
+
+        }
+
+        function tru() {
+
+            var number1 = parseInt(document.getElementById('num1').value);
+            var number2 = parseInt(document.getElementById('num2').value);
+            var result = number1 - number2;
+            document.getElementById('result').value = result;
+
+        }
+
+        function nhan() {
+
+            var number1 = parseInt(document.getElementById('num1').value);
+            var number2 = parseInt(document.getElementById('num2').value);
+            var result = number1 * number2;
+            document.getElementById('result').value = result;
+
+        }
+
+        function chia() {
+
+            var number1 = parseInt(document.getElementById('num1').value);
+            var number2 = parseInt(document.getElementById('num2').value);
+            var result = number1 / number2;
+            document.getElementById('result').value = result;
+
+        }
+
+
+        // for (var i = 0; i <= 10; i++) {
+        //     document.write(i + '-hello <br>');
+        // }
+
+        // var x = 1;
+
+        // while (x < 20) {
+        //     document.write(x + "-vong lap while <br>");
+        //     x++;
+        // }
+
+        // var num = 1;
+        // do {
+        //     document.write('So thu' + num + '<br>');
+        //     num++;
+        // } while (num < 5);
+        // var num = prompt('Nhap so');
+        // var x = parseInt(num);
+        // var count = 0;
+        // var sum = 0;
+        // while (x <= 10 && x > 0 && isNaN(x) == false) {
+        //     for (var i = 1; i <= x; i++) {
+
+        //         if (i % 2 == 0) {
+        //             count++;
+        //             sum = i + sum;
+        //         }
+        //     }
+        //     document.write("Co so chan la :" + count + '<br>');
+        //     document.write("Tong la :" + sum);
+        //     break;
+        // }
+
+        //     function Hello() {
+
+        //         document.getElementById('green').innerHTML = "Hello";
+
+        //     }
+
+        //     function getName(name, age) {
+        //         document.write("Ten ban la " + name + ' tuoi la : ' + age);
+        //     }
+        //     getName('thang', 12);
+
+        //     function getInfo() {
+        //         return "<br>Thong tin khoa hoc <br>";
+        //     }
+
+        //     document.write(getInfo());
+
+        //     function getAge(age) {
+        //         return 'Tuoi cua ban ' + age;
+        //     }
+
+        //     document.write(getAge(39));
+
+        //     function getFullInfo(price) {
+        //         document.write(getInfo() + ' Co gia la : ' + price);
+
+        //     }
+
+        //     var tuoi = 20;
+
+        //     function getTuoi() {
+        //         document.write('<br> dung cho bien ngoai function ' + this.tuoi);
+        //     }
+
+        //     getTuoi();
+
+        //     function getTuoi2(){
+
+        //     }
+        //
+    </script>
+
+
+</body>
+
+</html>
