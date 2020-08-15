@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td {
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <table style="margin: 50px auto;" border="1">
+        <tr>
+            <td>Nhập a</td>
+            <td><input type="number" id="a"> </td>
+        </tr>
+        <tr>
+            <td>Nhập b</td>
+            <td><input type="number" id="b"> </td>
+        </tr>
+        <tr>
+            <td>Nhập c</td>
+            <td><input type="number" id="c"> </td>
+        </tr>
+        <tr align="center">
+            <td colspan="2"><button onclick="calculate()">Giải phương trình</button></td>
+
+        </tr>
+        <tr>
+            <td>Kết quả</td>
+            <td>
+                <p id="result"></p>
+            </td>
+        </tr>
+    </table>
+    <script>
+        function calculate() {
+            var x1, x2;
+            var a, b, c, delta;
+            a = parseInt(document.getElementById('a').value);
+            b = parseInt(document.getElementById('b').value);
+            c = parseInt(document.getElementById('c').value);
+            if (a == 0 || isNaN(a) || isNaN(b) || isNaN(c)) {
+                alert('Vui lòng nhập a,b,c với a khác 0');
+            } else {
+                delta = (b * b - 4 * a * c)
+                if (delta == 0) {
+
+                    x1 = -b / (2 * a);
+                    x2 = -b / (2 * a);
+                    document.getElementById('result').innerHTML = "Phương trình có 1 nghiệm kép = " + x1;
+
+                } else if (delta < 0) {
+                    document.getElementById('result').innerHTML = "Phương trình vô nghiệm ";
+                } else {
+
+                    x1 = (-b - Math.sqrt(delta)) / (2 * a);
+                    x2 = (-b + Math.sqrt(delta)) / (2 * a);
+                    document.getElementById('result').innerHTML = "Phương trình có 2 nghiệm  : <br>" + "x1 =" + x1 + "<br> x2=" + x2;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

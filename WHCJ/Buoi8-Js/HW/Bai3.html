@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    td {
+        padding: 15px;
+    }
+</style>
+
+<body>
+    <table style="margin: 50px auto;" border="1">
+        <tr>
+            <td>Nhập chiều dài thứ nhất</td>
+            <td><input type="number" id="num1"> </td>
+        </tr>
+        <tr>
+            <td>Nhập chiều dài thứ 2</td>
+            <td><input type="number" id="num2"> </td>
+        </tr>
+        <tr align="center">
+            <td colspan="2"><button onclick="calculate()">Tính toán</button></td>
+
+        </tr>
+        <tr>
+            <td>Chu vi là</td>
+            <td><input type="number" id="Chu-vi" readonly></td>
+        </tr>
+        <tr>
+            <td>Diện tích là</td>
+            <td><input type="number" id="Dien-tich" readonly></td>
+        </tr>
+    </table>
+
+    <script>
+        function calculate() {
+            var num1 = parseInt(document.getElementById('num1').value);
+            var num2 = parseInt(document.getElementById('num2').value);
+            if (isNaN(num1) || isNaN(num2)) {
+                alert('Vui lòng nhập đủ cả 2 số');
+            } else if (num1 < 1 || num2 < 1) {
+                alert('Vui lòng nhập số dương');
+            } else {
+                var ChuVi = (num1 + num2) * 2;
+                var DienTich = num1 * num2;
+                document.getElementById('Chu-vi').value = ChuVi;
+                document.getElementById('Dien-tich').value = DienTich;
+            }
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    td {
+        padding: 15px;
+    }
+</style>
+
+<body>
+
+    <table style="margin: 50px auto;" border="1">
+        <tr>
+            <td>Nhập số kiểm tra nguyên tố từ 1-100</td>
+            <td><input type="number" id="a"> </td>
+        </tr>
+        <tr align="center">
+            <td colspan="2"><button onclick="calculate()">Check số nguyên tố</button></td>
+        </tr>
+        <tr>
+            <td>Kết quả</td>
+            <td>
+                <p id="result"></p>
+            </td>
+        </tr>
+    </table>
+    <script>
+        function calculate() {
+            var a = parseInt(document.getElementById('a').value);
+            if (isNaN(a) || a < 1 || a > 100) {
+                alert('Nhập số trong khoảng 0-100');
+            } else {
+                var check = Math.sqrt(a);
+                var count = 0;
+                for (var i = 2; i < check; i++) {
+                    if (a % i == 0) {
+                        count++;
+                    }
+                }
+                if (count == 0) {
+                    document.getElementById('result').innerHTML = "Đây là số nguyên tố";
+                } else {
+                    document.getElementById('result').innerHTML = "Đây không là số nguyên tố";
+                }
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>
