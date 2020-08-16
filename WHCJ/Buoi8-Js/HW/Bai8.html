@@ -105,30 +105,103 @@
             document.getElementById('phone').value = null;
         }
 
+        function check() {
+
+            var id = document.getElementById('id').value;
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var phone = document.getElementById('phone').value;
+            for (var i = 0; i < this.listPerson.length; i++) {
+                if (this.listPerson[i].id == id) {
+                    clear();
+                    alert('Đã tồn tại mã ID này');
+                    return false;
+                }
+            }
+            if (isNaN(id) || isNaN(phone) || name.length == 0 || email.length == 0) {
+                alert('Vui lòng nhập đầy đủ trường');
+                return false
+            } else {
+                return true;
+            }
+
+        }
+
         function Add() {
-            var listPerson = this.listPerson;
-            var person = {
-                id: document.getElementById('id').value,
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                phone: document.getElementById('phone').value
-            };
-            listPerson.push(person)
-            alert('Đã thêm thành công');
-            clear();
+            if (check() == true) {
+                var listPerson = this.listPerson;
+
+                var person = {
+                    id: document.getElementById('id').value,
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    phone: document.getElementById('phone').value
+                };
+
+                listPerson.push(person)
+                alert('Đã thêm thành công');
+                clear();
+            }
+            View();
+
 
         }
 
         function Delete() {
-            var id = document.getElementById('id').value;
-            for (var i = 0; i < this.listPerson.length; i++) {
-                if (this.listPerson[i].id == id) {
-                    this.listPerson.splice(i, 1);
-                    clear();
-                    alert('Đã xóa thành công');
+            var id = parseInt(document.getElementById('id').value);
+            if (isNaN(id)) {
+                document.getElementById('id').disabled = true;
+                alert('Bạn cần tìm kiếm trước');
+            } else {
+                for (var i = 0; i < this.listPerson.length; i++) {
+                    if (this.listPerson[i].id == id) {
+                        this.listPerson.splice(i, 1);
+                        clear();
+                        alert('Đã xóa thành công');
+                    }
                 }
             }
+
             View();
+        }
+
+        function Refresh() {
+            clear();
+            document.getElementById('id').disabled = false;
+        }
+
+        function Edit() {
+            var id = parseInt(document.getElementById('id').value);
+            if (isNaN(id)) {
+                document.getElementById('id').disabled = true;
+                alert('Bạn cần tìm kiếm trước')
+            } else {
+                for (var i = 0; i < this.listPerson.length; i++) {
+                    if (this.listPerson[i].id == id) {
+                        this.listPerson[i].id = document.getElementById('id').value;
+                        this.listPerson[i].name = document.getElementById('name').value;
+                        this.listPerson[i].email = document.getElementById('email').value;
+                        this.listPerson[i].phone = document.getElementById('phone').value;
+                        alert('Đã sửa thành công');
+                    }
+                }
+                View();
+            }
+
+        }
+
+        function Search() {
+            var searchKey = parseInt(prompt('Nhập id tìm kiếm'));
+            var id = document.getElementById('id').value;
+            for (var i = 0; i < this.listPerson.length; i++) {
+                if (this.listPerson[i].id == searchKey) {
+                    document.getElementById('id').value = this.listPerson[i].id;
+                    document.getElementById('name').value = this.listPerson[i].name;
+                    document.getElementById('email').value = this.listPerson[i].email;
+                    document.getElementById('phone').value = this.listPerson[i].phone;
+                }
+            }
+            View()
         }
     </script>
 </body>
