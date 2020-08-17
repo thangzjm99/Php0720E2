@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <select name="" id="option" onchange="onchange1()">
+        <option value="1">opt 1</option>
+        <option value="2">Opt 2</option>
+        <option value="3">Opt 3</option>
+    </select>
+    <input type="text" id="text" onkeyup="alert1()">
+    <p id="show-alert1"></p>
+    <p id='copy' oncopy="copy1()"> copy copy</p>
+    <input type="number" id="a" onkeyup="calculate()">
+    <input type="number" id="b" onkeyup="calculate()">
+
+</body>
+<script>
+    function onchange1() {
+        var value = document.getElementById('option').value;
+        alert(value);
+    }
+
+    function alert1() {
+        document.getElementById('show-alert1').innerHTML = document.getElementById('text').value;
+    }
+
+    function copy1() {
+        alert('copy');
+    }
+
+    function calculate() {
+
+        var a = parseInt(document.getElementById('a').value);
+        var b = parseInt(document.getElementById('b').value);
+        if (isNaN(a) || isNaN(b)) {
+            document.getElementById('show-alert1').innerHTML = "Nhap 2 so";
+        } else {
+            document.getElementById('show-alert1').innerHTML = "Tong la :" + (a + b);
+        }
+
+    }
+</script>
+
+</html>
