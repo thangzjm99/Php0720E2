@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="jquery-3.5.1.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="num1">Nhap so 1</label>
+    <input id="num1" type="number">
+    <br>
+    <label for="num2">Nhap so 2</label>
+    <input id="num2" type="number">
+    <br>
+    <br>
+
+    <button id="cong">Cong</button>
+    <button id="tru">Tru</button>
+    <button id="nhan">Nhan</button>
+    <button id="chia">Chia</button>
+    <button id="du">%</button>
+
+    <label for="result">ket qua</label>
+    <input id="result" type="number">
+    <script>
+        $(document).ready(function() {
+
+            function checkNum() {
+                var num1 = parseInt($('#num1').val());
+                var num2 = parseInt($('#num2').val());
+                if (isNaN(num2) || isNaN(num1)) {
+                    alert('Nhap du 2 so ');
+                    return false;
+                } else {
+                    return true;
+                }
+            };
+            $('#cong').click(function() {
+                if (checkNum()) {
+                    var num1 = parseInt($('#num1').val());
+                    var num2 = parseInt($('#num2').val());
+                    $('#result').val(num1 + num2);
+                };
+            });
+            $('#tru').click(function() {
+                if (checkNum()) {
+                    var num1 = parseInt($('#num1').val());
+                    var num2 = parseInt($('#num2').val());
+                    $('#result').val(num1 - num2);
+                };
+            });
+            $('#nhan').click(function() {
+                if (checkNum()) {
+                    var num1 = parseInt($('#num1').val());
+                    var num2 = parseInt($('#num2').val());
+                    $('#result').val(num1 * num2);
+                };
+            });
+            $('#chia').click(function() {
+                if (checkNum()) {
+                    if (parseInt($('#num2').val()) == 0) {
+                        alert('So thu 2 phai khac 0');
+                    } else {
+                        var num1 = parseInt($('#num1').val());
+                        var num2 = parseInt($('#num2').val());
+                        $('#result').val(num1 / num2);
+                    };
+                };
+            });
+            $('#du').click(function() {
+                if (checkNum()) {
+                    if (parseInt($('#num2').val()) == 0) {
+                        alert('So thu 2 phai khac 0');
+                    } else {
+                        var num1 = parseInt($('#num1').val());
+                        var num2 = parseInt($('#num2').val());
+                        $('#result').val(num1 % num2);
+                    };
+                };
+            });
+
+        });
+    </script>
+
+
+</body>
+
+</html>
