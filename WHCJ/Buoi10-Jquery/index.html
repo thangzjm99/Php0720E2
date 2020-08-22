@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+
+</body>
+<input type="text" id="name">
+<p id="showname"></p>
+<button value="1" class="getkg">1</button>
+<button value="2" class="getkg">2</button>
+<button value="3" class="getkg">3</button>
+<button value="4" class="getkg">4</button>
+
+<button id="shows">show</button>
+<button id="hide">hide</button>
+<p id="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti minus, cumque alias non, inventore et similique vitae praesentium consequuntur accusamus blanditiis facilis quibusdam modi, suscipit dicta dignissimos ab consequatur commodi?</p>
+<p id="show"></p>
+<h1></h1>
+<h3></h3>
+<span></span>
+<div id="header">
+    <span id="content" style="color: red;">
+    </span>
+</div>
+<h5>
+    helooooo
+</h5>
+<button id="red">red</button>
+<button id="blue"> blue</button>
+<input type="password" id="password">
+<button id="showpass">show passs</button>
+<button id="hidepass">hide pass</button>
+<select name="city" id="city">
+    <option value="">chon</option>
+    <option value="Ha noi">ha noi</option>
+    <option value="Ha nam">ha nam</option>
+</select>
+<h4>1</h4>
+<h4>2</h4>
+<h4>3</h4>
+<h4>4</h4>
+<script>
+    $(document).ready(function() {
+
+        $('h4').eq(0).click(function() {
+            $('h4').eq(0).hide();
+        });
+
+
+
+        document.getElementById('show').innerHTML = "Hoojcai";
+        $('h1').html('<i> Hoc vien itplus </i>');
+        $('h3').text('<i> Hoc vien itplus </i>');
+        $('#header span').html("Day la the span");
+
+        $('.getkg').click(function() {
+            var kg = $(this).val(); //lay gia tri tu button
+            alert(kg);
+        });
+
+        $('#shows').click(function() {
+            $('#description').show();
+        })
+        $('#hide').click(function() {
+            $('#description').hide();
+        })
+
+        $('#red').click(function() {
+            $('h5').css({
+                'color': 'red',
+                'font-size': '50px'
+            });
+
+        });
+        $('#blue').click(function() {
+            $('h5').css({
+                'color': 'blue',
+                'font-size': '50px'
+            });
+
+        });
+
+        $('#showpass').click(function() {
+            $('#password').attr('type', 'text'); //chuyen pass sang text
+
+        });
+        $('#hidepass').click(function() {
+            $('#password').attr('type', 'password'); //chuyn text sang pass
+
+        });
+
+        $('#city').change(function() {
+            var city = $(this).val();
+            alert(city);
+        })
+
+    });
+</script>
+
+</html>
