@@ -1,0 +1,138 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    min-height: 1000px;
+}
+
+#button_pink {
+    color: pink;
+    background-color: pink;
+    border-color: pink;
+    color: #000;
+}
+
+#header,
+#footer {
+    background: #000;
+}
+
+#promotion,
+#main {
+    margin-top: 5px;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+iframe {
+    width: 100%;
+}
+
+.search-box {
+    padding-right: 150px;
+}
+
+#header a i {
+    margin-left: 20px;
+    color: white;
+    width: 30px;
+}
+
+.list-group button:first-child {
+    background-color: black;
+    color: rgb(246, 192, 12);
+}
+
+.hot-product {
+    padding: 12px 0px;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.card {
+    position: relative;
+    border: 0px;
+}
+
+.card .price {
+    float: right;
+}
+
+.sale {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: red;
+    color: #fff;
+    position: absolute;
+    top: 3%;
+    left: 83%;
+    font-size: 12px;
+}
+
+.pd0 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.card-img-top {
+    border: 1px solid rgb(240, 240, 240);
+}
+
+.price_sale {
+    color: rgb(199, 3, 3);
+    font-weight: bold;
+}
+
+.price {
+    text-decoration: line-through;
+}
+
+#footer {
+    padding-top: 30px;
+    padding-bottom: 25px;
+}
+
+#footer p {
+    color: rgb(173, 173, 173);
+}
+
+.footer-white b {
+    color: white;
+}
+
+#footer img:first-child {
+    width: 80%;
+}
+
+li {
+    list-style: none;
+}
+
+.connection ul li a i {
+    font-size: 20px;
+    background-color: white;
+    color: black;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    line-height: 30px;
+    text-align: center;
+    transition: 0.4s;
+}
+
+.connection ul li {
+    float: left;
+    margin-right: 5px;
+}
