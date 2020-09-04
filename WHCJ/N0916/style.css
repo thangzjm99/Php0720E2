@@ -1,0 +1,179 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+
+.container-fluid {
+    background-color: black;
+}
+
+.main {
+    width: 1000px;
+    min-height: 100px;
+    margin: 0px auto;
+    background-color: white;
+}
+
+.header {
+    display: flex;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.header img {
+    margin-left: 10px;
+}
+
+.search-area {
+    position: relative;
+    margin-top: 10px;
+    margin-left: 140px;
+}
+
+#search-key {
+    width: 300px;
+    height: 28px;
+    border: 1px solid rgb(133, 131, 131);
+    border-radius: 5px;
+    padding: 8px;
+}
+
+.main .header .search-area #submit-btn {
+    position: absolute;
+    border: none;
+    padding: 0px;
+    line-height: 0px;
+    text-decoration: none;
+    top: 5px;
+    right: 10px;
+}
+
+i {
+    background-color: white;
+    font-size: 16px;
+}
+
+.contact-btn {
+    border-radius: 4px;
+    padding: 5px 15px 5px 15px;
+    margin-top: 10px;
+    margin-left: 200px;
+    background-color: green;
+    border: none;
+    color: white;
+    font-size: 18px;
+}
+
+.banner-img {
+    padding: 0px 10px;
+    width: 100%;
+}
+
+.product-title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: green;
+}
+
+.new-product {
+    margin-top: 20px;
+    padding: 0px 10px;
+}
+
+.new-product .img-long {
+    width: 500px;
+}
+
+.new-product .box {
+    margin-top: 10px;
+    width: 500px;
+    min-height: 50px;
+    background-color: rgb(109, 230, 109);
+}
+
+.new-product .box .title-box {
+    padding-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-transform: uppercase;
+    color: green;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.new-product .box .content-box {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: green;
+    font-size: 14px;
+}
+
+.product-detail img {
+    margin-left: 20px;
+    width: 85%;
+    position: relative;
+}
+
+.product-name {
+    font-weight: bold;
+    text-align: center;
+}
+
+.price {
+    font-weight: bold;
+    text-align: center;
+    color: #8f1948;
+}
+
+.row .col-md button {
+    position: absolute;
+    left: 32%;
+    background-color: #307814;
+    color: white;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 10px;
+}
+
+.footer {
+    position: relative;
+    margin-top: 10px;
+    background-color: black;
+    width: 100%;
+    height: 100px;
+}
+
+.end-title {
+    position: absolute;
+    top: 20%;
+    left: 2%;
+    color: rgba(255, 255, 255, 0.466);
+    font-size: 40px;
+}
+
+.end-title-small {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.466);
+    top: 30%;
+    left: 35%;
+    width: 700px;
+}
+
+.contact-form {
+    margin: 0px auto;
+    width: 800px;
+    margin-bottom: 100px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#textarea {
+    height: 100px;
+}

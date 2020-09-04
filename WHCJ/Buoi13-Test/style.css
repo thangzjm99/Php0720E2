@@ -145,7 +145,7 @@ i {
     margin-top: 100px;
     background-color: black;
     width: 100%;
-    height: 125px;
+    height: 50px;
 }
 
 .end-title {
@@ -167,4 +167,11 @@ i {
 .form-dang-ky {
     margin: 0px auto;
     width: 800px;
+}
+
+hr {
+    width: 100%;
+    height: 2px;
+    color: green;
+    background-color: green;
 }
